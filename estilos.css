@@ -112,6 +112,17 @@ svg {
   font-size: 14px;
   text-decoration: none;     
 }
+.btn-flotante {
+  position: fixed;
+  width: 40%;
+  left: 0px;
+  bottom: 40px;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-decoration: none;  
+}
 /* ========LISTA DE CARACTERISITICAS======= */
 .icon-row {
   display: flex;
