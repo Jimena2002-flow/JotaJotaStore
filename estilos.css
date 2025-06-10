@@ -1,0 +1,330 @@
+/* ========== BASE ========== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 32px;
+  margin-top: 20px;
+}
+
+p {
+  padding: 0 10px;
+  text-align: center;
+  color: #000;
+}
+
+#textoenRojo {
+  color: brown;
+  font-weight: bold;
+}
+
+/* ========== HEADER / TOPBAR ========== */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  color: white;
+  padding: 10px 20px;
+}
+.colorletraenca {
+  color: #ffffff;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: larger;
+}
+/* ========== REDES SOCIALES ========== */
+.navredes {
+      display: flex;
+      align-items: center;
+} 
+.redes {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+} 
+.redes li a {
+      text-decoration: none;
+      color: #ffffff;
+      display: flex;
+      transition: transform 0.3s ease;
+      font-family: Impact;
+} 
+.redes li a:hover {
+      transform: scale(1.2);
+}
+svg {
+      width: 24px;
+      height: 24px;
+      fill: #ffffff;
+}
+  
+/* ========== HERO SECTION ========== */
+.hero {
+  background-image: url(Imagenes/FONDO.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.btn-principal {
+  background-color: crimson;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.subti {
+  padding: 0 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.btn-whatsapp {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  background-color: #25d366;
+  color: #000000;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-decoration: none;     
+}
+/* ========LISTA DE CARACTERISITICAS======= */
+.icon-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+.icon-row a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.icon-row img {
+  width: 40px;
+  height: 40px;
+}
+
+.icon-row a:hover {
+  transform: scale(1.2);
+}
+.pasos-compra {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 30px 10px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.paso {
+  flex: 1 1 250px;
+  max-width: 300px;
+  padding: 10px;
+}
+
+.paso img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.paso h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.paso p {
+  font-size: 14px;
+  color: #444;
+}
+
+
+/* ========== PRODUCTOS ========== */
+.productos, .tabla-stock, .lista {
+  padding: 2rem;
+  background-color: #f7f7f7;
+  margin: 2rem auto;
+  max-width: 1200px;
+  border-radius: 10px;
+}
+
+.titulo-seccion {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.contenedor-articulos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.articulo {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.articulo:hover {
+  transform: scale(1.05);
+}
+
+.articulo img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.precio {
+  display: block;
+  font-weight: bold;
+  color: #3a3838;
+  margin-top: 0.5rem;
+}
+
+/* ========== NOSOTROS / MARCAS ========== */
+section.nosotros, section.mision-vision, section.marcas {
+  padding: 2rem;
+  text-align: center;
+  background-color: #dad8d4;
+  margin-bottom: 2rem;
+}
+
+section h1, section h2 {
+  color: #27251d;
+  margin-bottom: 1rem;
+}
+
+section p {
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+.logos-marcas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.logos-marcas svg {
+  width: 100px;
+  height: auto;
+  fill: #000000;
+  object-fit: contain;
+}
+
+/* ========== IMÁGENES ========== */
+.estilosimagenes {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 40px;
+  display: block;
+  margin: 20px auto;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background-color: #a5a4a4;
+  color: #fdfdfd;
+  font-size: large;
+  align-content: center;
+}
+
+/* ========== COOKIES Y BOTONES FIJOS ========== */
+.barracookis {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  height: 150px;
+  background-color: #808883;
+  color: #000000;
+  font-style: italic;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+  z-index: 999;
+}
+
+.boton-fijo {
+  background-color: #000;
+  color: white;
+  position: fixed;
+  bottom: 30px;
+  width: 100px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: none;
+  padding: 5px;
+  z-index: 1000;
+}
+
+.boton-fijo.izquierda {
+  left: 20px;
+}
+
+.boton-fijo.derecha {
+  right: 10px;
+}
+
+
+/* ========== MEDIA QUERIES ========== */
+@media (max-width: 768px) {
+  .contenedor-articulos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .redes {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero {
+    padding: 60px 10px;
+  }
+
+  .hero-content {
+    width: 90%;
+  }
+}
+
+/* ========== TRANSICIÓN GLOBAL ========== */
+* {
+  transition: all 0.3s ease-in-out;
+}
