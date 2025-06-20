@@ -13,7 +13,6 @@ h1 {
   font-size: 32px;
   margin-top: 20px;
 }
-
 p {
   padding: 0 10px;
   text-align: center;
@@ -175,7 +174,42 @@ svg {
   font-size: 14px;
   color: #444;
 }
+#preguntas {
+  text-align: center;
+  color: crimson;
+  font-family:  'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.acordeon {
+      width: 300px;
+      margin: 20px auto;
+      border: 2px solid #cccccc81;
+      border-radius: 5px;
+}
 
+.acordeon label {
+      display: block;
+      padding: 10px;
+      background: #f0f0f0;
+      cursor: pointer;
+      font-weight: bold;
+      border-bottom: 1px solid #ccc;
+}
+
+.acordeon input {
+      display: none
+}
+
+.contenido {
+      display: none;
+      padding: 20px;
+      background: #fff;
+}
+
+input:checked + label + .contenido {
+      display: block;
+}
 
 /* ========== PRODUCTOS ========== */
 .productos, .tabla-stock, .lista {
