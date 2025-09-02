@@ -19,6 +19,8 @@
           <li><a href="#"><svg role="img" viewBox="0 0 24 24"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></li>
         </ul>
       </div>
+      
+
       <nav> 
         <ul class="redes li a">
           <li><a href="Index.html">INICIO</a></li>
@@ -28,79 +30,96 @@
       </nav>
       <!-- Texto centrado -->
       <div class="colorletraenca">JOTA STORE</div>
+      
     </div> 
    </header>
      <!-- Sección de Productos -->
-     <section class="productos">
-      <h2 class="titulo-seccion">Nuestros Artículos</h2>
-      <div class="contenedor-articulos">
-        <div class="articulo">
-          <img src="Imagenes/p_sublimeperfumerojo2.jpg" alt="Producto 1">
-          <h3>Perfume Sublime - Rojo</h3>
-          <p>Perfumes es una fragancia de la familia olfativa Amaderada Aromática para Hombres y Mujeres. Esta fragancia es nueva. Bade'e Al Oud Sublime se lanzó en 2023.</p>
-          <span class="precio">S/.180.99</span>
+      <section class="productos">
+        <h2 class="titulo-seccion">Nuestros Artículos</h2>
+        <!-- 🛒 Icono Carrito -->
+        <div class="carrito-icono" onclick="abrirCarrito()">
+          <img src="svg/Carrito.svg" alt="Carrito" width="32">
+          <span id="contadorCarrito" class="carrito-contador">0</span>
         </div>
-        <div class="articulo">
-          <img src="Imagenes/l_cksunglass41058.jpg" alt="Producto 2">
-          <h3>Gafas de Sol - Calvin Klein Sunglasses</h3>
-          <p>Series number: CK19568S. Color code: 410. Shape: Rectangular. Lens Width: 58 mm. Lens Bridge: 15 mm. Arm Length: 140 mm. 100% UV protection. Frame Material: Plastic. Frame Color: Crystal Blue. Lenses Type: Blue. Rim Style: Full-Rim.</p>
-          <span class="precio">S/170</span>
-        </div>
-        <div class="articulo">
-          <img src="Imagenes/l_LED Light Bar Tech1.jpg" alt="Producto 3">
-          <h3>LeD para escritorio - light Bar Tech</h3>
-          <p>¡Dale un toque único a tu habitación, escritorio o setup gamer con esta increíble LED Light Bar Tech 1
-            Ideal para crear ambientes acogedores, modernos o vibrantes según tu estado de ánimo.
-            
-            Características:
-            • Iluminación LED multicolor (RGB)
-            • Modos de luz ajustables: estático, dinámico
-            • Control remoto incluido según modelo
-            • Fácil instalación base estable o montaje
-            en pared
-            • Bajo consumo de energía
-            • 15 colores , 4 modos</p>
+        <div class="contenedor-articulos">
+
+          <div class="articulo" data-id="1" data-precio="180.99">
+            <img src="Imagenes/p_sublimeperfumerojo2.jpg" alt="Producto 1">
+            <h3>Perfume Sublime - Rojo</h3>
+            <p>Perfumes es una fragancia de la familia olfativa Amaderada Aromática para Hombres y Mujeres. Esta fragancia es nueva. Bade'e Al Oud Sublime se lanzó en 2023.</p>
+            <span class="precio">S/.180.99</span>
+            <button onclick="agregarAlCarrito(this)">Añadir al carrito</button>
+          </div>
+
+          <div class="articulo" data-id="2" data-precio="170">
+            <img src="Imagenes/l_cksunglass41058.jpg" alt="Producto 2">
+            <h3>Gafas de Sol - Calvin Klein Sunglasses</h3>
+            <p>Series number: CK19568S. Color code: 410. Shape: Rectangular. Lens Width: 58 mm. Lens Bridge: 15 mm. Arm Length: 140 mm. 100% UV protection. Frame Material: Plastic. Frame Color: Crystal Blue. Lenses Type: Blue. Rim Style: Full-Rim.</p>
+            <span class="precio">S/170</span>
+            <button onclick="agregarAlCarrito(this)">Añadir al carrito</button>
+          </div>
+
+          <div class="articulo" data-id="3" data-precio="25.00">
+            <img src="Imagenes/l_LED Light Bar Tech1.jpg" alt="Producto 3">
+            <h3>LeD para escritorio - light Bar Tech</h3>
+            <p>¡Dale un toque único a tu habitación, escritorio o setup gamer con esta increíble LED Light Bar Tech 1...</p>
             <span class="precio">S/.25.00</span>
+            <button onclick="agregarAlCarrito(this)">Añadir al carrito</button>
+          </div>
+
+          <div class="articulo" data-id="4" data-precio="199.00">
+            <img src="Imagenes/p_lattafa.jpg" alt="Producto 4">
+            <h3>Unisex Khamrah Qahwa EDP Spray 3.4 oz Fragrances</h3>
+            <p>Sumérgete en el rico y exótico aroma de Khamrah Qahwa...</p>
+            <span class="precio">S/199.00</span>
+            <button onclick="agregarAlCarrito(this)">Añadir al carrito</button>
+          </div>
+
+          <div class="articulo" data-id="5" data-precio="180.99">
+            <img src="Imagenes/p_rasasi.jpg" alt="Producto 5">
+            <h3>Men's Hawas EDP Spray 3.4 oz Fragrances</h3>
+            <p>Diseñada por la reconocida casa Rasasi...</p>
+            <span class="precio">S/180.99</span>
+            <button onclick="agregarAlCarrito(this)">Añadir al carrito</button>
+          </div>
+
+          <div class="articulo" data-id="6" data-precio="199.00">
+            <img src="Imagenes/p_mandarinsky.png" alt="Producto 8">
+            <h3>Fragancias Odyssey Mandarin Sky EDP para hombre de 3.4 oz</h3>
+            <p>Odyssey Mandarin Sky es más que una simple fragancia...</p>
+            <span class="precio">S/199.00</span>
+            <button onclick="agregarAlCarrito(this)">Añadir al carrito</button>
+          </div>
+
+          <div class="articulo" data-id="7" data-precio="420.88">
+            <img src="Imagenes/c_m&nbolsoverdeagua.png" alt="Producto 9">
+            <h3>Bolso de hombro vegano Loti - Negro</h3>
+            <p>El bolso de hombro vegano Loti cuenta con un compartimento principal...</p>
+            <span class="precio">S/420.88</span>
+            <button onclick="agregarAlCarrito(this)">Añadir al carrito</button>
+          </div>
+
         </div>
-        <div class="articulo">
-          <img src="Imagenes/p_lattafa.jpg" alt="Producto 4">
-          <h3>Unisex Khamrah Qahwa EDP Spray 3.4 oz Fragrances</h3>
-          <p>Sumérgete en el rico y exótico aroma de Khamrah Qahwa y añade un toque de elegancia de Oriente Medio a tu colección de fragancias. Pide hoy mismo tu botella de 95 ml y vive la magia de la exquisita artesanía de Lattafa.</p>
-          <span class="precio">S/199.00</span>
-        </div>
-        <div class="articulo">
-          <img src="Imagenes/p_rasasi.jpg" alt="Producto 5">
-          <h3>Men's Hawas EDP Spray 3.4 oz Fragrances</h3>
-          <p>Diseñada por la reconocida casa Rasasi, esta fragancia masculina se presenta en un vaporizador EDP de 100 ml, lo que garantiza una dosis extra para causar una impresión duradera.</p>
-          <span class="precio">S/180.99</span>
-        </div>
-        
-        <div class="articulo">
-          <img src="Imagenes/p_mandarinsky.png" alt="Producto 8">
-          <h3>Fragancias Odyssey Mandarin Sky EDP para hombre de 3.4 oz</h3>
-          <p>Odyssey Mandarin Sky es más que una simple fragancia; es un accesorio versátil para cualquier ocasión. Perfecto para el día a día o para eventos especiales, es un aroma que te garantiza dejar una huella imborrable dondequiera que vayas. Creado para durar, este EDP en spray de 100 ml está diseñado para brindar una experiencia aromática duradera que evoca el lujoso encanto de los aromas de alta gama.</p>
-          <span class="precio">S/199.00</span>
-        </div>
-        <div class="articulo">
-          <img src="Imagenes/c_m&nbolsoverdeagua.png" alt="Producto 9">
-          <h3>Bolso de hombro vegano Loti - Negro</h3>
-          <p> El bolso de hombro vegano Loti cuenta con un compartimento principal con cierre de cremallera, lo que proporciona un almacenamiento seguro. Incluye un bolsillo frontal exterior con solapa y detalles metálicos, que también funciona como un práctico tarjetero. Este versátil bolso se puede llevar en la mano y tiene espacio suficiente para un smartphone grande. En el interior, está forrado con un parche de Arbor con el logotipo grabado que le da un toque distintivo.</p>
-          <span class="precio">S/420.88</span>
-        </div>
-  
-  
-  
-      </div>
-        
-      </div>
       </section>
-  
+
+       <!-- MODAL DEL CARRITO -->
+      <div id="modalCarrito" class="modal">
+        <div class="modal-contenido">
+          <span class="cerrar-modal" onclick="cerrarCarrito()">&times;</span>
+          <h2>Carrito de Compras</h2>
+          <div id="listaCarrito"></div>
+          <h3 id="totalCarrito">Total: €0.00</h3>
+          <button onclick="limpiarCarrito()">Vaciar Carrito</button>
+        </div>
+      </div>
+
 
   <!--Boton de WhatsApp -->
   <div>
     <img src="Imagenes/imagensobre el boton de pedido.png" alt="Asistente Jimena" class="btn-flotante">
     <a href="https://wa.me/51947229727" target="_blank" class="btn-whatsapp">Pide en WhatsApp</a>
   </div>
+  
   
   
   <!-- FOOTER -->
@@ -131,5 +150,72 @@
   </div>
     <p>&copy; 2025 JOTA STORE - Todos los derechos reservados</p>
   </footer>
+
+  <script>
+    let carrito = [];
+
+    function agregarAlCarrito(boton) {
+      let prod = boton.parentElement;
+      let id = prod.dataset.id;
+      let nombre = prod.querySelector("h3").innerText;
+      let precio = parseFloat(prod.dataset.precio);
+
+      let item = carrito.find(p => p.id === id);
+      if (item) {
+        item.cantidad++;
+      } else {
+        carrito.push({ id, nombre, precio, cantidad: 1 });
+      }
+      actualizarCarrito();
+    }
+
+    function eliminarDelCarrito(id) {
+      carrito = carrito.filter(p => p.id !== id);
+      actualizarCarrito();
+    }
+
+    function limpiarCarrito() {
+      carrito = [];
+      actualizarCarrito();
+    }
+
+    function actualizarCarrito() {
+      let lista = document.getElementById("listaCarrito");
+      let total = 0;
+      let contador = 0;
+      lista.innerHTML = "";
+
+      carrito.forEach(p => {
+        total += p.precio * p.cantidad;
+        contador += p.cantidad;
+        lista.innerHTML += `
+          <div class="item-carrito">
+            <span>${p.nombre} x${p.cantidad} - €${(p.precio * p.cantidad).toFixed(2)}</span>
+            <button onclick="eliminarDelCarrito('${p.id}')">X</button>
+          </div>
+        `;
+      });
+
+      document.getElementById("totalCarrito").innerText = "Total: €" + total.toFixed(2);
+
+      let contadorElem = document.getElementById("contadorCarrito");
+      if (contador > 0) {
+        contadorElem.innerText = contador;
+        contadorElem.style.display = "inline";
+      } else {
+        contadorElem.style.display = "none";
+      }
+    }
+
+    function abrirCarrito() {
+      document.getElementById("modalCarrito").style.display = "flex";
+    }
+
+    function cerrarCarrito() {
+      document.getElementById("modalCarrito").style.display = "none";
+    }
+  </script>
+
+
 </body>
 </html>

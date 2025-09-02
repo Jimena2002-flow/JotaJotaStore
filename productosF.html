@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos | JOTA STORE</title>
+  <link rel="icon" href="imagenes/logo.jpg" type="image/x-icon" />
+  <style>
+    /* === Carrito === */
+    .carrito-icono {
+      position: relative;
+      cursor: pointer;
+      margin-left: 20px;
+    }
+    .carrito-contador {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: red;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      border-radius: 50%;
+      padding: 3px 6px;
+      display: none;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal-contenido {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 500px;
+      max-height: 80vh;
+      overflow-y: auto;
+      position: relative;
+    }
+    .cerrar-modal {
+      position: absolute;
+      top: 10px; right: 15px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .producto {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+    }
+    .item-carrito {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 8px 0;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 6px;
+    }
+    .item-carrito button {
+      background: red;
+      color: white;
+      border: none;
+      padding: 4px 8px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="topbar">
+      <nav> 
+        <ul>
+          <li><a href="Index.html">INICIO</a></li>
+          <li><a href="PRODUCTOS.html">PRODUCTOS</a></li>
+          <li><a href="NOSOTROS.html">NOSOTROS</a></li>
+        </ul>
+      </nav>
+      <div class="colorletraenca">JOTA STORE</div>
+
+      <!-- 🛒 Icono Carrito -->
+      <div class="carrito-icono" onclick="abrirCarrito()">
+        <img src="svg/cart.svg" alt="Carrito" width="32">
+        <span id="contadorCarrito" class="carrito-contador">0</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECCIÓN PRODUCTOS -->
+  
+<section class="productos">
+  <h2 class="titulo-seccion">Nuestros Artículos</h2>
+  <div class="contenedor-articulos">
+
+    <div class="articulo" data-id="1" data-precio="180.99">
+      <img src="Imagenes/p_sublimeperfumerojo2.jpg" alt="Producto 1">
+      <h3>Perfume Sublime - Rojo</h3>
+      <p>Perfumes es una fragancia de la familia olfativa Amaderada Aromática para Hombres y Mujeres. Esta fragancia es nueva. Bade'e Al Oud Sublime se lanzó en 2023.</p>
+      <span class="precio">S/.180.99</span>
+      <button onclick="agregarAlCarrito(this)">Añadir al carrito</button>
+    </div>
+
+    <div class="articulo" data-id="2" data-precio="170">
+      <img src="Imagenes/l_cksunglass41058.jpg" alt="Producto 2">
+      <h3>Gafas de Sol - Calvin Klein Sunglasses</h3>
+      <p>Series number: CK19568S. Color code: 410. Shape: Rectangular. Lens Width: 58 mm. Lens Bridge: 15 mm. Arm Length: 140 mm. 100% UV protection. Frame Material: Plastic. Frame Color: Crystal Blue. Lenses Type: Blue. Rim Style: Full-Rim.</p>
+      <span class="precio">S/170</span>
+      <button onclick="agregarAlCarrito(this)">Añadir al carrito</button>
+    </div>
+
+    <div class="articulo" data-id="3" data-precio="25.00">
+      <img src="Imagenes/l_LED Light Bar Tech1.jpg" alt="Producto 3">
+      <h3>LeD para escritorio - light Bar Tech</h3>
+      <p>¡Dale un toque único a tu habitación, escritorio o setup gamer con esta increíble LED Light Bar Tech 1...</p>
+      <span class="precio">S/.25.00</span>
+      <button onclick="agregarAlCarrito(this)">Añadir al carrito</button>
+    </div>
+
+    <div class="articulo" data-id="4" data-precio="199.00">
+      <img src="Imagenes/p_lattafa.jpg" alt="Producto 4">
+      <h3>Unisex Khamrah Qahwa EDP Spray 3.4 oz Fragrances</h3>
+      <p>Sumérgete en el rico y exótico aroma de Khamrah Qahwa...</p>
+      <span class="precio">S/199.00</span>
+      <button onclick="agregarAlCarrito(this)">Añadir al carrito</button>
+    </div>
+
+    <div class="articulo" data-id="5" data-precio="180.99">
+      <img src="Imagenes/p_rasasi.jpg" alt="Producto 5">
+      <h3>Men's Hawas EDP Spray 3.4 oz Fragrances</h3>
+      <p>Diseñada por la reconocida casa Rasasi...</p>
+      <span class="precio">S/180.99</span>
+      <button onclick="agregarAlCarrito(this)">Añadir al carrito</button>
+    </div>
+
+    <div class="articulo" data-id="6" data-precio="199.00">
+      <img src="Imagenes/p_mandarinsky.png" alt="Producto 8">
+      <h3>Fragancias Odyssey Mandarin Sky EDP para hombre de 3.4 oz</h3>
+      <p>Odyssey Mandarin Sky es más que una simple fragancia...</p>
+      <span class="precio">S/199.00</span>
+      <button onclick="agregarAlCarrito(this)">Añadir al carrito</button>
+    </div>
+
+    <div class="articulo" data-id="7" data-precio="420.88">
+      <img src="Imagenes/c_m&nbolsoverdeagua.png" alt="Producto 9">
+      <h3>Bolso de hombro vegano Loti - Negro</h3>
+      <p>El bolso de hombro vegano Loti cuenta con un compartimento principal...</p>
+      <span class="precio">S/420.88</span>
+      <button onclick="agregarAlCarrito(this)">Añadir al carrito</button>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- MODAL DEL CARRITO -->
+  <div id="modalCarrito" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar-modal" onclick="cerrarCarrito()">&times;</span>
+      <h2>Carrito de Compras</h2>
+      <div id="listaCarrito"></div>
+      <h3 id="totalCarrito">Total: €0.00</h3>
+      <button onclick="limpiarCarrito()">Vaciar Carrito</button>
+    </div>
+  </div>
+
+  <script>
+    let carrito = [];
+
+    function agregarAlCarrito(boton) {
+      let prod = boton.parentElement;
+      let id = prod.dataset.id;
+      let nombre = prod.querySelector("h3").innerText;
+      let precio = parseFloat(prod.dataset.precio);
+
+      let item = carrito.find(p => p.id === id);
+      if (item) {
+        item.cantidad++;
+      } else {
+        carrito.push({ id, nombre, precio, cantidad: 1 });
+      }
+      actualizarCarrito();
+    }
+
+    function eliminarDelCarrito(id) {
+      carrito = carrito.filter(p => p.id !== id);
+      actualizarCarrito();
+    }
+
+    function limpiarCarrito() {
+      carrito = [];
+      actualizarCarrito();
+    }
+
+    function actualizarCarrito() {
+      let lista = document.getElementById("listaCarrito");
+      let total = 0;
+      let contador = 0;
+      lista.innerHTML = "";
+
+      carrito.forEach(p => {
+        total += p.precio * p.cantidad;
+        contador += p.cantidad;
+        lista.innerHTML += `
+          <div class="item-carrito">
+            <span>${p.nombre} x${p.cantidad} - €${(p.precio * p.cantidad).toFixed(2)}</span>
+            <button onclick="eliminarDelCarrito('${p.id}')">X</button>
+          </div>
+        `;
+      });
+
+      document.getElementById("totalCarrito").innerText = "Total: €" + total.toFixed(2);
+
+      let contadorElem = document.getElementById("contadorCarrito");
+      if (contador > 0) {
+        contadorElem.innerText = contador;
+        contadorElem.style.display = "inline";
+      } else {
+        contadorElem.style.display = "none";
+      }
+    }
+
+    function abrirCarrito() {
+      document.getElementById("modalCarrito").style.display = "flex";
+    }
+
+    function cerrarCarrito() {
+      document.getElementById("modalCarrito").style.display = "none";
+    }
+  </script>
+</body>
+</html>
